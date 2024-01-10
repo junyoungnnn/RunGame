@@ -51,32 +51,33 @@ public class Runner : MonoBehaviour
                 roadLine = RoadLine.MIDDLE;
             }
         }
+
+        //// 왼쪽 방향키를 누르면
+        //if (Input.GetKeyDown(KeyCode.LeftArrow))
+        //{
+        //    if (roadLine <= RoadLine.LEFT)
+        //    {
+        //        roadLine = RoadLine.LEFT;
+        //    }
+        //    else
+        //    {
+        //        roadLine--;
+        //    }
+        //}
+
+        ////오른쪽 방향키를 누르면
+        //if (Input.GetKeyDown(KeyCode.RightArrow))
+        //{
+        //    if (roadLine >= RoadLine.RIGHT)
+        //    {
+        //        roadLine = RoadLine.RIGHT;
+        //    }
+        //    else
+        //    {
+        //        roadLine++;
+        //    }
+        //}
     }
 }
 
 
-//// 왼쪽 방향키를 누르면
-//if (Input.GetKeyDown(KeyCode.LeftArrow))
-//{
-//    if (roadLine <= RoadLine.LEFT)
-//    {
-//        roadLine = RoadLine.LEFT;
-//    }
-//    else
-//    {
-//        roadLine++;
-//    }
-//}
-
-//오른쪽 방향키를 누르면
-//        if (Input.GetKeyDown(KeyCode.RightArrow))
-//        {
-//    if (roadLine >= RoadLine.RIGHT
-//            {
-//        roadLine = RoadLine.RIGHT;
-//    }
-//    else
-//    {
-//        roadLine--;
-//    }
-//}
