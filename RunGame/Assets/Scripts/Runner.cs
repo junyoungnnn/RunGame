@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public enum RoadLine
 {
@@ -12,6 +13,7 @@ public enum RoadLine
 public class Runner : MonoBehaviour
 {
     [SerializeField] RoadLine roadLine;
+    [SerializeField] float positionX = 3.5f;
 
     void Start()
     {
@@ -22,6 +24,7 @@ public class Runner : MonoBehaviour
     void Update()
     {
         Move();
+        Status();
     }
 
     public void Move()
@@ -55,11 +58,7 @@ public class Runner : MonoBehaviour
         //// 왼쪽 방향키를 누르면
         //if (Input.GetKeyDown(KeyCode.LeftArrow))
         //{
-        //    if (roadLine <= RoadLine.LEFT)
-        //    {
-        //        roadLine = RoadLine.LEFT;
-        //    }
-        //    else
+        //    if (roadLine > RoadLine.LEFT)
         //    {
         //        roadLine--;
         //    }
@@ -68,15 +67,37 @@ public class Runner : MonoBehaviour
         ////오른쪽 방향키를 누르면
         //if (Input.GetKeyDown(KeyCode.RightArrow))
         //{
-        //    if (roadLine >= RoadLine.RIGHT)
+        //    if (roadLine < RoadLine.RIGHT)
         //    {
-        //        roadLine = RoadLine.RIGHT;
-        //    }
-        //    else
-        //    {
-        //        roadLine++;
+        //       roadLine++;
         //    }
         //}
+    }
+
+    public void Status()
+    {
+        switch(roadLine)
+        {
+            case RoadLine.LEFT:
+
+                Movement(-positionX);
+                break;
+
+            case RoadLine.MIDDLE:
+
+                Movement(0);
+                break;
+
+            case RoadLine.RIGHT:
+
+                Movement(positionX);
+                break;
+        }
+    }
+
+    public void Movement(float positionX)
+    {
+        transform.position = new Vector3(positionX, 0, 0);
     }
 }
 
