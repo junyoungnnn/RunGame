@@ -18,11 +18,12 @@ public class Runner : MonoBehaviour
 
     private void OnEnable()
     {
-        InputManager.instance.keyAction += Move;
+        // InputManager.instance.keyAction += Move;
     }
 
     void Start()
     {
+        InputManager.instance.keyAction += Move;
         roadLine = RoadLine.MIDDLE;
     }
 
@@ -108,6 +109,16 @@ public class Runner : MonoBehaviour
     private void OnDisable()
     {
         InputManager.instance.keyAction -= Move;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        CollisionObject collisionObject = other.GetComponent<CollisionObject>();
+
+        if(collisionObject != null) 
+        {
+            collisionObject.Activate(this);
+        }
     }
 }
 

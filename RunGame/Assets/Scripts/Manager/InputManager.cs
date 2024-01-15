@@ -14,7 +14,7 @@ public class InputManager : Singleton<InputManager>
         {
             return;
         }
-
+        
         if(keyAction != null)
         {
             keyAction.Invoke();
