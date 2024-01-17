@@ -6,6 +6,8 @@ public class SpawnManager : MonoBehaviour
 {
     [SerializeField] int random;
     [SerializeField] int count;
+    [SerializeField] int randomPosition;
+
     [SerializeField] Transform[] spawnPosition;
     [SerializeField] GameObject[] vehicleObject;
     
@@ -40,6 +42,7 @@ public class SpawnManager : MonoBehaviour
         while(true)
         {
             random = Random.Range(0, vehicleObject.Length);
+            randomPosition = Random.Range(0, spawnPosition.Length);
 
             while (vehicleList[random].activeSelf == true)
             {
@@ -53,6 +56,7 @@ public class SpawnManager : MonoBehaviour
             }
 
             vehicleList[random].SetActive(true);
+            vehicleList[random].transform.position = spawnPosition[randomPosition].position;
 
             yield return new WaitForSeconds(5);
         }
