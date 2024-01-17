@@ -6,13 +6,9 @@ using UnityEngine;
 public class RoadManager : MonoBehaviour
 {
     [SerializeField] List<GameObject> roadList;
-    [SerializeField] List<GameObject> newRoad;
+
     [SerializeField] float speed = 5.0f;
-
-    float newZ = 48.6f;
-
-    public Vector3 targetPosition = new Vector3(0, 0, 48.3f);
-    
+    [SerializeField] float offset = 24.3f;
 
     void Start()
     {
@@ -29,11 +25,14 @@ public class RoadManager : MonoBehaviour
 
     public void NewPosition()
     {
-        newRoad.Add(roadList[0]);
-        roadList.RemoveAt(0);
+        GameObject newRoad = roadList[0];
 
-        newRoad[0].transform.position = targetPosition;
+        roadList.Remove(newRoad);
 
-        roadList.Add(newRoad[0]);
+        float newz = roadList[roadList.Count - 1].transform.position.z + offset;
+        
+        newRoad.transform.position = new Vector3(0,0, newz);
+
+        roadList.Add(newRoad);
     }
 }

@@ -35,6 +35,7 @@ public class Runner : MonoBehaviour
 
     public void Move()
     {
+
         // 왼쪽 방향키를 누르면
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
