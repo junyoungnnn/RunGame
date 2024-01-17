@@ -6,7 +6,6 @@ public class Vehicle : CollisionObject
 {
     [SerializeField] Vector3 direction;
     [SerializeField] float speed = 5.0f;
-    [SerializeField] List<Vehicle> vehicles;
 
     private void OnEnable()
     {
@@ -20,9 +19,7 @@ public class Vehicle : CollisionObject
 
     public override void Activate(Runner runner)
     {
-        Debug.Log("Game over");
+        Debug.Log("Game Over");
     }
-
-
 
 }
