@@ -43,20 +43,20 @@ public class SpawnManager : MonoBehaviour
         {
             int lastPosition = Random.Range(0, spawnPosition.Length);
 
-            for (int i = 0; i < Random.Range(1,3); i++)
+            for (int i = 0; i < Random.Range(1, 3); i++)
             {
                 random = Random.Range(0, vehicleObject.Length);
 
-            while (vehicleList[random].activeSelf == true)
-            {
-                random = (random + 1) % vehicleList.Count;
-            }
+                while (vehicleList[random].activeSelf == true)
+                {
+                    random = (random + 1) % vehicleList.Count;
+                }
 
-                // 랜덤으로 위치를 설정하는 변수를 선업합니다.
+                // 랜덤으로 위치를 설정하는 변수를 선언합니다.
                 randomPosition = Random.Range(0, spawnPosition.Length);
 
                 // 이전에 저장되어 있던 변수와 랜덤값이 같으면 다시뽑습니다
-                while(randomPosition == lastPosition)
+                while (randomPosition == lastPosition)
                 {
                     randomPosition = Random.Range(0, spawnPosition.Length);
                 }
@@ -68,6 +68,7 @@ public class SpawnManager : MonoBehaviour
                 // 랜덤으로 설정된 vehicle 오브젝트를 활성화 합니다.
                 vehicleList[random].SetActive(true);
             }
+    
             // vehicleList.Capacity 증가
 
             if(CheckSet() == true)
