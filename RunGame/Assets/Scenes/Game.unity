@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -428,6 +428,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6359688301728525871, guid: 3d51b344728598043bb2e30e6570c054, type: 3}
+      propertyPath: speed
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6880241878869810336, guid: 3d51b344728598043bb2e30e6570c054, type: 3}
       propertyPath: m_Name
       value: Ambulance (1)
@@ -435,30 +439,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6880241878869810336, guid: 3d51b344728598043bb2e30e6570c054, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 470574841}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d51b344728598043bb2e30e6570c054, type: 3}
---- !u!1 &470574840 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6880241878869810336, guid: 3d51b344728598043bb2e30e6570c054, type: 3}
-  m_PrefabInstance: {fileID: 470574839}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &470574841
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 470574840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a15c51583ce98b24988336523fdaf256, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  direction: {x: 0, y: 0, z: 0}
-  speed: 10
 --- !u!4 &501813914 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 192726496742019053, guid: 8507d3dc7f0259048aa36cb9e0ed5f0d, type: 3}
@@ -517,6 +499,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6359688301728525871, guid: 3d51b344728598043bb2e30e6570c054, type: 3}
+      propertyPath: speed
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6880241878869810336, guid: 3d51b344728598043bb2e30e6570c054, type: 3}
       propertyPath: m_Name
       value: Ambulance (2)
@@ -524,30 +510,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6880241878869810336, guid: 3d51b344728598043bb2e30e6570c054, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 508715360}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d51b344728598043bb2e30e6570c054, type: 3}
---- !u!1 &508715359 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6880241878869810336, guid: 3d51b344728598043bb2e30e6570c054, type: 3}
-  m_PrefabInstance: {fileID: 508715358}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &508715360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 508715359}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a15c51583ce98b24988336523fdaf256, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  direction: {x: 0, y: 0, z: 0}
-  speed: 10
 --- !u!4 &553461241 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1181435394534642620, guid: e075c2d2efbb9e84f8a67166381872c6, type: 3}
@@ -1250,25 +1214,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 981513485}
   m_CullTransparentMesh: 1
---- !u!1 &1019117927 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6880241878869810336, guid: 3d51b344728598043bb2e30e6570c054, type: 3}
-  m_PrefabInstance: {fileID: 1271439757}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1019117928
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1019117927}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a15c51583ce98b24988336523fdaf256, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  direction: {x: 0, y: 0, z: 0}
-  speed: 10
 --- !u!1001 &1237960895
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1402,6 +1347,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6359688301728525871, guid: 3d51b344728598043bb2e30e6570c054, type: 3}
+      propertyPath: speed
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6880241878869810336, guid: 3d51b344728598043bb2e30e6570c054, type: 3}
       propertyPath: m_Name
       value: Ambulance
@@ -1409,10 +1358,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6880241878869810336, guid: 3d51b344728598043bb2e30e6570c054, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1019117928}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d51b344728598043bb2e30e6570c054, type: 3}
 --- !u!1 &1278837221 stripped
 GameObject:
@@ -1501,6 +1447,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   random: 0
   count: 0
+  randomPosition: 0
   spawnPosition:
   - {fileID: 706681267}
   - {fileID: 618897013}

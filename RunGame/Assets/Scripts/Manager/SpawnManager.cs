@@ -20,7 +20,7 @@ public class SpawnManager : MonoBehaviour
     // 게임 오브젝트를 비활성화 한 상태로 저장합니다.
     void Start()
     {
-        vehicleList.Capacity = 20;
+        vehicleList.Capacity = 1000;
         Create();
         StartCoroutine(ActiveVehicle());
     }
@@ -41,24 +41,51 @@ public class SpawnManager : MonoBehaviour
     {
         while(true)
         {
-            random = Random.Range(0, vehicleObject.Length);
-            randomPosition = Random.Range(0, spawnPosition.Length);
+            int lastPosition = Random.Range(0, spawnPosition.Length);
+
+            for (int i = 0; i < Random.Range(1,3); i++)
+            {
+                random = Random.Range(0, vehicleObject.Length);
 
             while (vehicleList[random].activeSelf == true)
             {
-                count++;
-                if (count >= vehicleObject.Length)
-                {
-                    yield break;
-                }
-
                 random = (random + 1) % vehicleList.Count;
             }
 
-            vehicleList[random].SetActive(true);
-            vehicleList[random].transform.position = spawnPosition[randomPosition].position;
+                // 랜덤으로 위치를 설정하는 변수를 선업합니다.
+                randomPosition = Random.Range(0, spawnPosition.Length);
+
+                // 이전에 저장되어 있던 변수와 랜덤값이 같으면 다시뽑습니다
+                while(randomPosition == lastPosition)
+                {
+                    randomPosition = Random.Range(0, spawnPosition.Length);
+                }
+                lastPosition = randomPosition;
+
+                // vehicle 오브젝트가 생선되는 위치를 랜덤으로 설정합니다.
+                vehicleList[random].transform.position = spawnPosition[randomPosition].position;
+
+                // 랜덤으로 설정된 vehicle 오브젝트를 활성화 합니다.
+                vehicleList[random].SetActive(true);
+            }
+            // vehicleList.Capacity 증가
+
+            if(CheckSet() == true)
+            {
+                Create();
+            }
 
             yield return new WaitForSeconds(5);
         }
+    }
+
+    public bool CheckSet()
+    {
+        for(int i = 0; i<vehicleList.Count;i++) 
+        {
+            if (vehicleList[i].activeSelf == false)
+                return false;
+        }
+        return true;
     }
 }

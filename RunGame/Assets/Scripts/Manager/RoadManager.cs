@@ -7,7 +7,7 @@ public class RoadManager : MonoBehaviour
 {
     [SerializeField] List<GameObject> roadList;
 
-    [SerializeField] float speed = 5.0f;
+    [SerializeField] float speed = 7.0f;
     [SerializeField] float offset = 24.3f;
 
     void Start()
