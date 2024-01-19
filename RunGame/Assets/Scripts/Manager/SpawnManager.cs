@@ -40,7 +40,7 @@ public class SpawnManager : MonoBehaviour
     // vehicleLIst가 다 찼는지 확인하는 함수
     public bool FullVehicle()
     {
-        for (int i = 0; i < vehicleList.Count - 1; i++)
+        for (int i = 0; i < vehicleList.Count; i++)
         {
             if (vehicleList[i].activeSelf == false)
                 return false;
@@ -58,7 +58,7 @@ public class SpawnManager : MonoBehaviour
             {
                 random = Random.Range(0, vehicleObject.Length);
 
-                // 현재 게임 오브젝트가 활성호 되어 있는지 확인합니다
+                // 현재 게임 오브젝트가 활성화되어 있는지 확인합니다
                 while (vehicleList[random].activeSelf == true)
                 {
                     if (FullVehicle() == true) // 현재 리스트에 있는 모든 오브젝트가 활성화되어 있는 지 확인합니다.
