@@ -37,6 +37,17 @@ public class SpawnManager : MonoBehaviour
         }
     }
 
+    // vehicleLIst가 다 찼는지 확인하는 함수
+    public bool FullVehicle()
+    {
+        for (int i = 0; i < vehicleList.Count - 1; i++)
+        {
+            if (vehicleList[i].activeSelf == false)
+                return false;
+        }
+        return true;
+    }
+
     IEnumerator ActiveVehicle()
     {
         while(true)
@@ -47,8 +58,22 @@ public class SpawnManager : MonoBehaviour
             {
                 random = Random.Range(0, vehicleObject.Length);
 
+                // 현재 게임 오브젝트가 활성호 되어 있는지 확인합니다
                 while (vehicleList[random].activeSelf == true)
                 {
+                    if (FullVehicle() == true) // 현재 리스트에 있는 모든 오브젝트가 활성화되어 있는 지 확인합니다.
+                    {
+                        // 모든 게임 오브젝트가 활성화되어 있다면 게임 오브젝트를 새로 생성한 다음
+                        // vehicle을 리스트에 넣어줍니다.
+                        GameObject vehicle = Instantiate(vehicleObject[Random.Range(0, vehicleObject.Length)]);
+                        
+                        vehicle.SetActive(false);
+                        
+                        vehicleList.Add(vehicle);
+                    }
+
+                    // 현재 리스트에 있는 모든 게임 오브젝트가 활성화 되어 있지 않다면
+                    // random 변수의 값을 +1 해서 다시 검색합니다.
                     random = (random + 1) % vehicleList.Count;
                 }
 
@@ -68,25 +93,7 @@ public class SpawnManager : MonoBehaviour
                 // 랜덤으로 설정된 vehicle 오브젝트를 활성화 합니다.
                 vehicleList[random].SetActive(true);
             }
-    
-            // vehicleList.Capacity 증가
-
-            if(CheckSet() == true)
-            {
-                Create();
-            }
-
-            yield return new WaitForSeconds(5);
+            yield return CoroutineCache.waitForSeconds(5f);
         }
-    }
-
-    public bool CheckSet()
-    {
-        for(int i = 0; i<vehicleList.Count;i++) 
-        {
-            if (vehicleList[i].activeSelf == false)
-                return false;
-        }
-        return true;
     }
 }
