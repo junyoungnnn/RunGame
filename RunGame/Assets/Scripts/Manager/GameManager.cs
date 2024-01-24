@@ -1,0 +1,24 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class GameManager : Singleton<GameManager>
+{
+    [SerializeField] float limit = 50;
+
+    [SerializeField] public float speed = 20;
+    [SerializeField] public bool state = true;
+
+    public void GameOver()
+    {
+        state = false;
+    }
+
+    public void IncreaseSpeed()
+    {
+        if(speed < limit)
+        {
+            speed += 1;
+        }
+    }
+}

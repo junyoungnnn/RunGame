@@ -8,6 +8,4 @@ public class MainMenu : MonoBehaviour
     {
         StartCoroutine(AsyncSceneLoader.instance.AsyncLoad(SceneID.GAME));
     }
-
-
 }

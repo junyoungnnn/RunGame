@@ -50,7 +50,7 @@ public class SpawnManager : MonoBehaviour
 
     IEnumerator ActiveVehicle()
     {
-        while(true)
+        while(GameManager.instance.state == true)
         {
             int lastPosition = Random.Range(0, spawnPosition.Length);
 

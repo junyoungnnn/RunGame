@@ -7,7 +7,6 @@ public class RoadManager : MonoBehaviour
 {
     [SerializeField] List<GameObject> roadList;
 
-    [SerializeField] float speed = 7.0f;
     [SerializeField] float offset = 24.3f;
 
     void Start()
@@ -17,9 +16,14 @@ public class RoadManager : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.instance.state == false)
+        {
+            return;
+        }
+
         for (int i = 0; i < roadList.Count; i++)
         {
-            roadList[i].transform.Translate(Vector3.back * speed * Time.deltaTime);
+            roadList[i].transform.Translate(Vector3.back * GameManager.instance.speed * Time.deltaTime);
         }
     }
 

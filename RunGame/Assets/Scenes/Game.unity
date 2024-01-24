@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -133,7 +133,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6160588923364878207, guid: 3d51b344728598043bb2e30e6570c054, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.54469246
+      value: -2.11
       objectReference: {fileID: 0}
     - target: {fileID: 6160588923364878207, guid: 3d51b344728598043bb2e30e6570c054, type: 3}
       propertyPath: m_LocalPosition.y
@@ -141,7 +141,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6160588923364878207, guid: 3d51b344728598043bb2e30e6570c054, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.774933
+      value: 65.14
       objectReference: {fileID: 0}
     - target: {fileID: 6160588923364878207, guid: 3d51b344728598043bb2e30e6570c054, type: 3}
       propertyPath: m_LocalRotation.w
@@ -170,6 +170,10 @@ PrefabInstance:
     - target: {fileID: 6160588923364878207, guid: 3d51b344728598043bb2e30e6570c054, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6359688301728525871, guid: 3d51b344728598043bb2e30e6570c054, type: 3}
+      propertyPath: speed
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6880241878869810336, guid: 3d51b344728598043bb2e30e6570c054, type: 3}
       propertyPath: m_Name
@@ -406,7 +410,6 @@ MonoBehaviour:
   - {fileID: 1300880939}
   - {fileID: 444577246}
   - {fileID: 1278837221}
-  speed: 7
   offset: 24.3
 --- !u!4 &321011856
 Transform:
@@ -445,9 +448,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -530719939013242583, guid: 6ca31454312a28e46bbbcdd24a83df48, type: 3}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8089383323489584930, guid: 6ca31454312a28e46bbbcdd24a83df48, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.42386007
+      value: -2.01
       objectReference: {fileID: 0}
     - target: {fileID: 8089383323489584930, guid: 6ca31454312a28e46bbbcdd24a83df48, type: 3}
       propertyPath: m_LocalPosition.y
@@ -455,7 +462,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8089383323489584930, guid: 6ca31454312a28e46bbbcdd24a83df48, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.715317
+      value: 57.9
       objectReference: {fileID: 0}
     - target: {fileID: 8089383323489584930, guid: 6ca31454312a28e46bbbcdd24a83df48, type: 3}
       propertyPath: m_LocalRotation.w
@@ -507,6 +514,11 @@ Transform:
 --- !u!4 &553461241 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2449180215790334878, guid: c3764efaf998bc14b8ab46bc7d7cc12c, type: 3}
+  m_PrefabInstance: {fileID: 8191341319355681204}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &553461245 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7608416650285921195, guid: c3764efaf998bc14b8ab46bc7d7cc12c, type: 3}
   m_PrefabInstance: {fileID: 8191341319355681204}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &618897012
@@ -898,7 +910,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 1
-  m_FollowOffset: {x: 0, y: 2, z: -4.5}
+  m_FollowOffset: {x: 0, y: 2, z: -6}
   m_XDamping: 0.5
   m_YDamping: 0.5
   m_ZDamping: 0.5
@@ -1007,7 +1019,7 @@ Transform:
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
   m_LocalRotation: {x: 0.065403156, y: 0, z: 0, w: 0.99785894}
-  m_LocalPosition: {x: 0, y: 2, z: -4.5}
+  m_LocalPosition: {x: 0, y: 2, z: -6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1899,6 +1911,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Runner
       objectReference: {fileID: 0}
+    - target: {fileID: 3125991639429456506, guid: c3764efaf998bc14b8ab46bc7d7cc12c, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 553461245}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
