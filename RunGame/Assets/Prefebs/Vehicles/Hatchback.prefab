@@ -171,6 +171,7 @@ GameObject:
   - component: {fileID: 8089383323489584930}
   - component: {fileID: 2429492524992858803}
   - component: {fileID: -530719939013242583}
+  - component: {fileID: -6672893346459672409}
   m_Layer: 0
   m_Name: Hatchback
   m_TagString: Untagged
@@ -196,6 +197,7 @@ Transform:
   - {fileID: 3488195543175685943}
   - {fileID: 2235505082279529644}
   - {fileID: 7956819697326059765}
+  - {fileID: 170567757108864895}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!65 &2429492524992858803
@@ -233,6 +235,81 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   direction: {x: 0, y: 0, z: 0}
   speed: 20
+--- !u!114 &-6672893346459672409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8810740924654255357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2492cc954445eec469b4469add408c0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vehicle: {fileID: 0}
+--- !u!1001 &2800261552089294407
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8089383323489584930}
+    m_Modifications:
+    - target: {fileID: 2630521591291478328, guid: 93f9ab70fe351ff418dc45c077ea11af, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2630521591291478328, guid: 93f9ab70fe351ff418dc45c077ea11af, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2630521591291478328, guid: 93f9ab70fe351ff418dc45c077ea11af, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2630521591291478328, guid: 93f9ab70fe351ff418dc45c077ea11af, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2630521591291478328, guid: 93f9ab70fe351ff418dc45c077ea11af, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2630521591291478328, guid: 93f9ab70fe351ff418dc45c077ea11af, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2630521591291478328, guid: 93f9ab70fe351ff418dc45c077ea11af, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2630521591291478328, guid: 93f9ab70fe351ff418dc45c077ea11af, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2630521591291478328, guid: 93f9ab70fe351ff418dc45c077ea11af, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2630521591291478328, guid: 93f9ab70fe351ff418dc45c077ea11af, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2954675986333083255, guid: 93f9ab70fe351ff418dc45c077ea11af, type: 3}
+      propertyPath: m_Name
+      value: Vehicle Detector
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 93f9ab70fe351ff418dc45c077ea11af, type: 3}
+--- !u!4 &170567757108864895 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2630521591291478328, guid: 93f9ab70fe351ff418dc45c077ea11af, type: 3}
+  m_PrefabInstance: {fileID: 2800261552089294407}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2841527009041826010
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -171,6 +171,7 @@ GameObject:
   - component: {fileID: 6160588923364878207}
   - component: {fileID: 748268650704486291}
   - component: {fileID: 6359688301728525871}
+  - component: {fileID: 4086881246713501627}
   m_Layer: 0
   m_Name: Ambulance
   m_TagString: Untagged
@@ -196,6 +197,7 @@ Transform:
   - {fileID: 1537138026811492202}
   - {fileID: 4196107725640592625}
   - {fileID: 5427331103796826280}
+  - {fileID: 90845615129017966}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!65 &748268650704486291
@@ -233,6 +235,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   direction: {x: 0, y: 0, z: 0}
   speed: 20
+--- !u!114 &4086881246713501627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6880241878869810336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2492cc954445eec469b4469add408c0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vehicle: {fileID: 0}
 --- !u!1001 &2442275931289327764
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -302,6 +317,72 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 028724a65b499cd4ebfc30add6eb1bde, type: 3}
   m_PrefabInstance: {fileID: 2442275931289327764}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2721232902452297558
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6160588923364878207}
+    m_Modifications:
+    - target: {fileID: 2630521591291478328, guid: 93f9ab70fe351ff418dc45c077ea11af, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2630521591291478328, guid: 93f9ab70fe351ff418dc45c077ea11af, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2630521591291478328, guid: 93f9ab70fe351ff418dc45c077ea11af, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2630521591291478328, guid: 93f9ab70fe351ff418dc45c077ea11af, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2630521591291478328, guid: 93f9ab70fe351ff418dc45c077ea11af, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2630521591291478328, guid: 93f9ab70fe351ff418dc45c077ea11af, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2630521591291478328, guid: 93f9ab70fe351ff418dc45c077ea11af, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2630521591291478328, guid: 93f9ab70fe351ff418dc45c077ea11af, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2630521591291478328, guid: 93f9ab70fe351ff418dc45c077ea11af, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2630521591291478328, guid: 93f9ab70fe351ff418dc45c077ea11af, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2630521591291478328, guid: 93f9ab70fe351ff418dc45c077ea11af, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2954675986333083255, guid: 93f9ab70fe351ff418dc45c077ea11af, type: 3}
+      propertyPath: m_Name
+      value: Vehicle Detector
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 93f9ab70fe351ff418dc45c077ea11af, type: 3}
+--- !u!4 &90845615129017966 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2630521591291478328, guid: 93f9ab70fe351ff418dc45c077ea11af, type: 3}
+  m_PrefabInstance: {fileID: 2721232902452297558}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3832677491495187117
 PrefabInstance:

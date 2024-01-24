@@ -107,6 +107,7 @@ GameObject:
   - component: {fileID: 7552435824307683609}
   - component: {fileID: 6203620708042369518}
   - component: {fileID: -3557547893392789918}
+  - component: {fileID: 8746051556884404092}
   m_Layer: 0
   m_Name: Sedan
   m_TagString: Untagged
@@ -132,6 +133,7 @@ Transform:
   - {fileID: 2946594707579199756}
   - {fileID: 543522806663580311}
   - {fileID: 8566033684332345038}
+  - {fileID: 5442555735295012136}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!65 &6203620708042369518
@@ -169,6 +171,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   direction: {x: 0, y: 0, z: 0}
   speed: 20
+--- !u!114 &8746051556884404092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7118762931400538822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2492cc954445eec469b4469add408c0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vehicle: {fileID: 0}
 --- !u!1 &7742527936716524700
 GameObject:
   m_ObjectHideFlags: 0
@@ -582,4 +597,66 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c37505d493a767440a516449242bbc2e, type: 3}
   m_PrefabInstance: {fileID: 7103353329829596997}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8000269709103246352
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7552435824307683609}
+    m_Modifications:
+    - target: {fileID: 2630521591291478328, guid: 93f9ab70fe351ff418dc45c077ea11af, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2630521591291478328, guid: 93f9ab70fe351ff418dc45c077ea11af, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2630521591291478328, guid: 93f9ab70fe351ff418dc45c077ea11af, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2630521591291478328, guid: 93f9ab70fe351ff418dc45c077ea11af, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2630521591291478328, guid: 93f9ab70fe351ff418dc45c077ea11af, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2630521591291478328, guid: 93f9ab70fe351ff418dc45c077ea11af, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2630521591291478328, guid: 93f9ab70fe351ff418dc45c077ea11af, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2630521591291478328, guid: 93f9ab70fe351ff418dc45c077ea11af, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2630521591291478328, guid: 93f9ab70fe351ff418dc45c077ea11af, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2630521591291478328, guid: 93f9ab70fe351ff418dc45c077ea11af, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2954675986333083255, guid: 93f9ab70fe351ff418dc45c077ea11af, type: 3}
+      propertyPath: m_Name
+      value: Vehicle Detector
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 93f9ab70fe351ff418dc45c077ea11af, type: 3}
+--- !u!4 &5442555735295012136 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2630521591291478328, guid: 93f9ab70fe351ff418dc45c077ea11af, type: 3}
+  m_PrefabInstance: {fileID: 8000269709103246352}
   m_PrefabAsset: {fileID: 0}
