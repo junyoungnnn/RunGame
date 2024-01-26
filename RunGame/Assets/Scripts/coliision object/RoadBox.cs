@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -15,6 +16,9 @@ public class RoadBox : CollisionObject
     public override void Activate(Runner runner)
     {
         runner.animator.speed = GameManager.instance.speed / initSpeed;
+
+        DataManager.instance.data.score += 10;
+        DataManager.instance.Save();
 
         callback.Invoke();
         GameManager.instance.IncreaseSpeed();

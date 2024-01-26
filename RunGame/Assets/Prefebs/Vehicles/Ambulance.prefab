@@ -219,8 +219,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2, y: 2, z: 4.25}
-  m_Center: {x: 0, y: 1.5, z: -0.25}
+  m_Size: {x: 2, y: 2, z: 3.5}
+  m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!114 &6359688301728525871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,6 +235,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   direction: {x: 0, y: 0, z: 0}
   speed: 20
+  minRandomSpeed: 5
+  maxRandomSpeed: 20
 --- !u!114 &4086881246713501627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,7 +249,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2492cc954445eec469b4469add408c0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vehicle: {fileID: 0}
 --- !u!1001 &2442275931289327764
 PrefabInstance:
   m_ObjectHideFlags: 0

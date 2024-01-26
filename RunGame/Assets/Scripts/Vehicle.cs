@@ -6,6 +6,9 @@ public class Vehicle : CollisionObject
 {
     [SerializeField] Vector3 direction;
     [SerializeField] float speed;
+
+    [SerializeField] float minRandomSpeed = 5;
+    [SerializeField] float maxRandomSpeed = 20;
     public float GetSpeed
     {
         get { return speed; }
@@ -14,7 +17,12 @@ public class Vehicle : CollisionObject
 
     private void OnEnable()
     {
-        speed = GameManager.instance.speed + Random.Range(5, 20);
+        if (minRandomSpeed < 19)
+        {
+            minRandomSpeed += 1;
+        }
+
+        speed = GameManager.instance.speed + Random.Range(minRandomSpeed, maxRandomSpeed);
         direction = Vector3.forward;
     }
 

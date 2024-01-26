@@ -93,7 +93,7 @@ public class SpawnManager : MonoBehaviour
                 // 랜덤으로 설정된 vehicle 오브젝트를 활성화 합니다.
                 vehicleList[random].SetActive(true);
             }
-            yield return CoroutineCache.waitForSeconds(5f);
+            yield return CoroutineCache.waitForSeconds(LevelManager.spawnTime);
         }
     }
 }
