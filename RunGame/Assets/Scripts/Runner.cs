@@ -13,10 +13,13 @@ public enum RoadLine
 public class Runner : MonoBehaviour
 {
     public Animator animator;
+    
 
     [SerializeField] RoadLine roadLine;
     [SerializeField] float positionX = 2.25f;
     [SerializeField] float lerpSpeed = 5.0f;
+    [SerializeField] LeftCollider leftCollider;
+    [SerializeField] RightCollider rightCollider;
 
     private void OnEnable()
     {
@@ -45,6 +48,10 @@ public class Runner : MonoBehaviour
         // 왼쪽 방향키를 누르면
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
+            if(leftCollider.Detector)
+            {
+                return;
+            }
             if (roadLine == RoadLine.MIDDLE)
             {
                 roadLine = RoadLine.LEFT;
@@ -58,6 +65,10 @@ public class Runner : MonoBehaviour
         // 오른쪽 방향키를 누르면
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
+            if(rightCollider.Detector)
+            {
+                return;
+            }
             if (roadLine == RoadLine.MIDDLE)
             {
                 roadLine = RoadLine.RIGHT;
