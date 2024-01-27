@@ -15,15 +15,4 @@ public class LevelManager : MonoBehaviour
             spawnTime -= decreaseTime;
         }
     }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-
-
-        if(collision != null)
-        {
-
-        }
-    }
-
 }
