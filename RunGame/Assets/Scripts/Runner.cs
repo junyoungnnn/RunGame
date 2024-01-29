@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -13,13 +14,14 @@ public enum RoadLine
 public class Runner : MonoBehaviour
 {
     public Animator animator;
-    
+
 
     [SerializeField] RoadLine roadLine;
+    [SerializeField] RoadLine previousRoadLine;
+
+
     [SerializeField] float positionX = 2.25f;
     [SerializeField] float lerpSpeed = 5.0f;
-    [SerializeField] LeftCollider leftCollider;
-    [SerializeField] RightCollider rightCollider;
 
     private void OnEnable()
     {
@@ -30,6 +32,7 @@ public class Runner : MonoBehaviour
     {
         InputManager.instance.keyAction += Move;
         roadLine = RoadLine.MIDDLE;
+        previousRoadLine = RoadLine.MIDDLE;
     }
 
 
@@ -48,16 +51,14 @@ public class Runner : MonoBehaviour
         // 왼쪽 방향키를 누르면
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            if(leftCollider.Detector)
-            {
-                return;
-            }
             if (roadLine == RoadLine.MIDDLE)
             {
+                previousRoadLine = roadLine;
                 roadLine = RoadLine.LEFT;
             }
             else if (roadLine == RoadLine.RIGHT)
             {
+                previousRoadLine = roadLine;
                 roadLine = RoadLine.MIDDLE;
             }
         }
@@ -65,16 +66,14 @@ public class Runner : MonoBehaviour
         // 오른쪽 방향키를 누르면
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            if(rightCollider.Detector)
-            {
-                return;
-            }
             if (roadLine == RoadLine.MIDDLE)
             {
+                previousRoadLine = roadLine;
                 roadLine = RoadLine.RIGHT;
             }
             else if (roadLine == RoadLine.LEFT)
             {
+                previousRoadLine = roadLine;
                 roadLine = RoadLine.MIDDLE;
             }
         }
@@ -100,7 +99,7 @@ public class Runner : MonoBehaviour
 
     public void Status()
     {
-        switch(roadLine)
+        switch (roadLine)
         {
             case RoadLine.LEFT:
 
@@ -117,6 +116,11 @@ public class Runner : MonoBehaviour
                 Movement(positionX);
                 break;
         }
+    }
+
+    public void RevertPosition()
+    {
+        roadLine = previousRoadLine;
     }
 
     public void Movement(float positionX)

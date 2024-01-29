@@ -111,9 +111,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3f830f646260c74a9421b27ad944667, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 7608416650285921195}
   roadLine: 0
   positionX: 2.25
   lerpSpeed: 5
+  leftCollider: {fileID: 0}
+  rightCollider: {fileID: 0}
 --- !u!54 &3059775610578311098
 Rigidbody:
   m_ObjectHideFlags: 0
