@@ -53,11 +53,13 @@ public class Runner : MonoBehaviour
         {
             if (roadLine == RoadLine.MIDDLE)
             {
+                animator.Play("Left Avoid");
                 previousRoadLine = roadLine;
                 roadLine = RoadLine.LEFT;
             }
             else if (roadLine == RoadLine.RIGHT)
             {
+                animator.Play("Left Avoid");
                 previousRoadLine = roadLine;
                 roadLine = RoadLine.MIDDLE;
             }
@@ -68,11 +70,13 @@ public class Runner : MonoBehaviour
         {
             if (roadLine == RoadLine.MIDDLE)
             {
+                animator.Play("Right Avoid");
                 previousRoadLine = roadLine;
                 roadLine = RoadLine.RIGHT;
             }
             else if (roadLine == RoadLine.LEFT)
             {
+                animator.Play("Right Avoid");
                 previousRoadLine = roadLine;
                 roadLine = RoadLine.MIDDLE;
             }
