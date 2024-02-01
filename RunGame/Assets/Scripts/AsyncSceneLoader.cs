@@ -52,7 +52,7 @@ public class AsyncSceneLoader : Singleton<AsyncSceneLoader>
         // bool isDone : 해당 동작이 준비되었는 지 판단하는 기능입니다.
         while(asyncoperation.isDone == false)
         {
-            color.a += Time.deltaTime;
+            color.a += Time.unscaledDeltaTime;
 
             fadeImage.color= color;
 
@@ -62,7 +62,7 @@ public class AsyncSceneLoader : Singleton<AsyncSceneLoader>
                 // fake loading
 
                 // color의 alpha 값을 1.0f로 Lerp 함수를 통해서 올려주세요.
-                color.a = Mathf.Lerp(color.a, 1.0f, Time.deltaTime);
+                color.a = Mathf.Lerp(color.a, 1.0f, Time.unscaledDeltaTime);
 
                 fadeImage.color = color;
 
