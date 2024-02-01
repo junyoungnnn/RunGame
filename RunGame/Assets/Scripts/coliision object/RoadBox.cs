@@ -17,9 +17,6 @@ public class RoadBox : CollisionObject
     {
         runner.animator.speed = GameManager.instance.speed / initSpeed;
 
-        DataManager.instance.data.score += 10;
-        DataManager.instance.Save();
-
         callback.Invoke();
         GameManager.instance.IncreaseSpeed();
     }

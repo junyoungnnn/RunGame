@@ -6,15 +6,29 @@ using UnityEngine.UI;
 public class ScoreUI : MonoBehaviour
 {
     [SerializeField] int score;
-    [SerializeField] Text scoreTexct;
+    [SerializeField] Text scoreText;
 
     void Start()
     {
-        
+        StartCoroutine(IncreaseScore()); ;
     }
 
     IEnumerator IncreaseScore()
     {
-        yield return CoroutineCache.waitForSeconds(0.25f);
+        while (GameManager.instance.state)
+        {
+            yield return CoroutineCache.waitForSeconds(0.25f);
+
+            if(GameManager.instance.state == false)
+            {
+                DataManager.instance.RenewalScore(score);
+
+                yield break;
+            }
+
+            score = score + 10;
+
+            scoreText.text = score.ToString() + "m";
+        }
     }
 }

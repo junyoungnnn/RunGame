@@ -10,8 +10,34 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] public float speed = 20;
     [SerializeField] public bool state = true;
 
+    public float minRandomSpeed = 5;
+    public float maxRandomSpeed = 20;
+
+    private Transform parent;
+    private GameObject panel;
+
+    public void ControlRandomSpeed()
+    {
+        if(minRandomSpeed < maxRandomSpeed - 1)
+        {
+            minRandomSpeed++;
+        }
+    }
+
+
     public void GameOver()
     {
+        parent = GameObject.Find("UI Canvas").GetComponent<Transform>();
+
+        if (panel == null)
+        {
+            panel = Instantiate(Resources.Load<GameObject>("GameOver Panel"), parent);
+        }
+        else
+        {
+            panel.SetActive(true);
+        }
+
         state = false;
     }
 
@@ -30,6 +56,8 @@ public class GameManager : Singleton<GameManager>
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        state = true;
+        speed = 20;
         Time.timeScale = 1.0f;
     }
 

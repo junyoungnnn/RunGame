@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using Unity.VisualScripting;
 
 [System.Serializable]
 public class Data
 {
-    public int score;
+    public int bestScore;
 }
 
 public class DataManager : Singleton<DataManager>
@@ -16,7 +17,6 @@ public class DataManager : Singleton<DataManager>
     private void Start()
     {
         Load();
-        Debug.Log(data.score);
     }
 
     public void Save()
@@ -39,6 +39,16 @@ public class DataManager : Singleton<DataManager>
         string code = System.Text.Encoding.UTF8.GetString(bytes);
 
         data = JsonUtility.FromJson<Data>(code);
+    }
+
+    public void RenewalScore(int currentScore)
+    {
+        if(data.bestScore < currentScore)
+        {
+            data.bestScore = currentScore;
+
+            Save();
+        }
     }
 
 }
