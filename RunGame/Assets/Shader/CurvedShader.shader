@@ -1,4 +1,4 @@
-Shader"Curved/CurvedShader"
+Shader"Custom/CurvedShader"
 {
     Properties
     {
